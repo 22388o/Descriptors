@@ -19,13 +19,13 @@ function getP2TRAddress(keyPair, network) {
   return bech32m.encode('bc', words)
 }
 
-const keyPair = new ECPair.fromWIF('5KN7MzqK5wt2TP1fQCYyHBtDrXdJuXbUzm4A9rKAteGu3Qi5CVR')
+var myWifString = '5KN7MzqK5wt2TP1fQCYyHBtDrXdJuXbUzm4A9rKAteGu3Qi5CVR'
+
+const keyPair = new ECPair.fromWIF(myWifString)
 
 console.log(getP2TRAddress(keyPair))
 
-
 var password = 'TestingOneTwoThree'
-var myWifString = '5KN7MzqK5wt2TP1fQCYyHBtDrXdJuXbUzm4A9rKAteGu3Qi5CVR'
 var decoded = new ECPair.fromWIF(myWifString)
 
 var encryptedKey = bip38.encrypt(decoded.privateKey, decoded.compressed, password)
