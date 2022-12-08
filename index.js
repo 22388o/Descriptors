@@ -5,8 +5,8 @@ const secp256k1 = ecurve.getCurveByName('secp256k1')
 const schnorr = require('bip-schnorr')
 const { bech32, bech32m } = require('bech32')
 
-var bip38 = require('bip38')
-var wif = require('wif')
+const bip38 = require('bip38')
+const wif = require('wif')
 
 const tinysecp = require('tiny-secp256k1')
 const ECPair = ECPairFactory(tinysecp);
