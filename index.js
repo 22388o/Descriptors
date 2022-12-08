@@ -5,6 +5,9 @@ const secp256k1 = ecurve.getCurveByName('secp256k1')
 const schnorr = require('bip-schnorr')
 const { bech32, bech32m } = require('bech32')
 
+var bip38 = require('bip38')
+var wif = require('wif')
+
 const tinysecp = require('tiny-secp256k1')
 const ECPair = ECPairFactory(tinysecp);
 
@@ -20,8 +23,6 @@ const keyPair = new ECPair.fromWIF('5KN7MzqK5wt2TP1fQCYyHBtDrXdJuXbUzm4A9rKAteGu
 
 console.log(getP2TRAddress(keyPair))
 
-var bip38 = require('bip38')
-var wif = require('wif')
 
 var password = 'TestingOneTwoThree'
 var myWifString = '5KN7MzqK5wt2TP1fQCYyHBtDrXdJuXbUzm4A9rKAteGu3Qi5CVR'
